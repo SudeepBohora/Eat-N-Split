@@ -39,6 +39,7 @@ export default function App() {
   function handleAddFriend(friend) {
     // eslint-disable-next-line no-shadow
     setFriends((friends) => [...friends, friend])
+    setShowAddFriend(false)
   }
   return (
     <div className='app'>
@@ -84,7 +85,7 @@ function Friend({ friend }) {
   )
 }
 
-function FormAddFriend(onAddFriend) {
+function FormAddFriend({ onAddFriend }) {
   const [name, setName] = useState('')
   const [image, setImage] = useState('https://i.pravatar.cc/48')
 
